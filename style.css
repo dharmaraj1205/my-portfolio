@@ -1,16 +1,4 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-:root {
-    --primary-color: #004080;
-    --accent-color: #0073e6;
-    --bg-color: #f5f7fa;
-    --text-color: #333;
-    --white: #fff;
-    --border-radius: 12px;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
+/* ==== Reset & Base ==== */
 * {
     margin: 0;
     padding: 0;
@@ -18,100 +6,199 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    display: flex;
+    min-height: 100vh;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--white);
+/* ==== Sidebar ==== */
+.sidebar {
+    width: 250px;
+    background-color: #1e293b;
     padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid #334155;
+    overflow-y: auto;
+}
+
+.sidebar img.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.sidebar h1 {
+    color: #facc15;
+    font-size: 1.6em;
+    margin-bottom: 5px;
     text-align: center;
-    box-shadow: var(--box-shadow);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.sidebar p {
+    color: #94a3b8;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-header p {
-    font-size: 1.2rem;
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
 
-header nav {
-    margin-top: 15px;
-}
-
-header nav a {
-    color: var(--white);
-    margin: 0 12px;
+.sidebar nav a {
+    color: #94a3b8;
     text-decoration: none;
     font-weight: 500;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.sidebar nav a:hover {
+    background-color: #334155;
+    color: #38bdf8;
 }
 
+/* ==== Main Content ==== */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* ==== Sections ==== */
 section {
-    background: var(--white);
-    margin: 30px auto;
-    padding: 30px 20px;
-    max-width: 900px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    margin-bottom: 50px;
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-2px);
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     margin-bottom: 15px;
-    color: var(--primary-color);
-    border-left: 6px solid var(--accent-color);
+    border-left: 4px solid #38bdf8;
     padding-left: 10px;
 }
 
+/* ==== Lists ==== */
 ul {
-    list-style: none;
-    padding-left: 0;
+    list-style: disc;
+    padding-left: 20px;
+    color: #cbd5e1;
 }
 
-ul li::before {
-    content: "✔️";
-    margin-right: 10px;
-    color: var(--accent-color);
+/* ==== Jobs ==== */
+.job {
+    margin-bottom: 25px;
 }
 
-a {
-    color: var(--accent-color);
-    text-decoration: none;
+.job h3 {
+    color: #facc15;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-a:hover {
-    text-decoration: underline;
+.job p {
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-a.btn {
+/* ==== Contact Links ==== */
+#contact a {
+  color: #38bdf8; /* Light blue for visibility */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #facc15; /* Yellow on hover */
+  text-decoration: underline;
+}
+
+/* ==== Resume Button ==== */
+.btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: var(--accent-color);
-    color: var(--white);
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: 0.3s;
+    background: linear-gradient(135deg, #e6edf0, #f5f5f7);
+    color: #0f172a;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(14, 165, 233, 0.4);
 }
 
-a.btn:hover {
-    background-color: #005bb5;
+.btn:hover {
+    background: #7dd3fc;
+    color: #99b2eb;
 }
 
+/* ==== Footer ==== */
 footer {
     text-align: center;
-    padding: 20px;
-    background: var(--primary-color);
-    color: var(--white);
+    font-size: 0.9em;
+    color: #64748b;
     margin-top: 40px;
+}
+
+/* ==== Responsive Design ==== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #334155;
+    }
+
+    .sidebar img.profile-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sidebar h1,
+    .sidebar p {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
 }

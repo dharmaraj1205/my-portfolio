@@ -1,67 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dharma Raj | Java Backend Developer</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharma Raj | Java Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Dharma Raj</h1>
-        <p>Software Developer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="profile.jpg" alt="Dharma Raj" class="profile-photo" />
+    <h1>Dharmaraj M</h1>
+    <p>Software Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main class="content">
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Motivated Java Developer with 2 years of experience building secure and scalable backend systems using Spring Boot and Microservices.
-            Passionate about clean code, REST APIs, and learning modern technologies.
-        </p>
+      <h2>About Me</h2>
+      <p>
+        Motivated Software Engineer with 2 years of experience building secure and scalable backend systems using Spring Boot and Microservices.
+        Passionate about clean code, REST APIs, and learning modern technologies.
+      </p>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+      <h2>Skills</h2>
+      <ul>
+        <li>Java 8</li>
+        <li>Spring Boot</li>
+        <li>Spring Security</li>
+        <li>JWT</li>
+        <li>Microservices</li>
+        <li>RESTful APIs</li>
+        <li>MySQL</li>
+        <li>Docker</li>
+        <li>Git</li>
+        <li>InterSystems Caché</li>
+        <li>SVN</li>
+        <li>WinSCP</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <p><strong>4W Technologies</strong> | July 2023 – Present</p>
+        <h3>Java Backend Developer – Absentee Manager</h3>
         <ul>
-            <li>Java 8</li>
-            <li>Spring Boot</li>
-            <li>Spring Security</li>
-            <li>JWT</li>
-            <li>Microservices</li>
-            <li>RESTful APIs</li>
-            <li>MySQL</li>
-            <li>Docker</li>
-            <li>Git</li>
-            <li>InterSystems Caché</li>
+          <li>Built a secure attendance management system using Spring Boot with JWT-based login.</li>
+          <li>Integrated Google Sign-In using OAuth 2.0 APIs to simplify user authentication.</li>
+          <li>Designed RESTful APIs for registration, login, and attendance tracking.</li>
+          <li>Implemented role-based access control using Spring Security for Admin and User roles.</li>
+          <li>Containerized the application using Docker for portable deployments and ease of testing.</li>
+          <li>Worked with JSP and React to connect backend APIs with frontend interfaces.</li>
         </ul>
+      </div>
+
+      <div class="job">
+        <h3>Full Stack Developer – Optalert (Mining Safety System)</h3>
+        <ul>
+          <li>Developed and maintained mining safety features using InterSystems Caché and CSP (Custom Server Pages).</li>
+          <li>Created CSP-based dashboards for live driver monitoring and alert visualization.</li>
+          <li>Automated file transfers and data processing using WinSCP and scheduled tasks.</li>
+          <li>Handled real-time alerting mechanisms based on fatigue analysis data from mining sites.</li>
+          <li>Worked closely with Australian teams to gather requirements and deliver critical safety improvements.</li>
+        </ul>
+      </div>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <h3>Absentee Manager</h3>
-        <p>Spring Boot-based attendance system with JWT authentication and React frontend. Handles customer-account relationships and secure login.</p>
-
-        <h3>Opatalert</h3>
-        <p>Worked on Australian mining project using InterSystems Caché and CSP to generate real-time mining alerts.</p>
+        <div  class="job">
+      <h2>Projects</h2>
+      <h3>Call Taxi Application</h3>
+      <p><strong>Duration:</strong> June 2025 – Present</p>
+      <ul>
+        <li>Developed a real-time taxi booking application using Spring Boot and REST APIs.</li>
+        <li>Designed microservices for customer, driver, and booking modules.</li>
+        <li>Implemented JWT-based login for users and role-based access for drivers/admins.</li>
+        <li>Integrated location-based booking logic and driver availability checks.</li>
+      </ul>
+      </div>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: dharmaraj1205.m@email.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/dharmaraj-m-b1a258210">linkedin.com/in/dharmaraj-m</a></p>
-
-        <p><a href="resume.pdf" download class="btn">Download Resume</a></p>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dharmaraj1205.m@email.com">dharmaraj1205.m@email.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/dharmaraj-m-b1a258210" target="_blank">linkedin.com/in/dharmaraj-m</a></p>
+      <p>GitHub: <a href="https://github.com/dharmaraj1205" target="_blank">github.com/dharmaraj1205</a></p>
+      <p><a href="resume.pdf" download class="btn">Download Resume</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Dharma Raj</p>
+      <p>&copy; 2025 Dharma Raj</p>
     </footer>
+  </main>
 </body>
 </html>
